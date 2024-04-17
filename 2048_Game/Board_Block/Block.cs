@@ -1,0 +1,95 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace _2048_Game
+{
+    public enum BLOCK_TYPE
+    {
+        BLANK,
+        BLOCK_2,
+        BLOCK_4,
+        BLOCK_8,
+        BLOCK_16,
+        BLOCK_32,
+        BLOCK_64,
+        BLOCK_128
+    }
+    public class Block : PictureBox
+    {
+        public BLOCK_TYPE block_Type;
+        public Block(Point blockPos, BLOCK_TYPE block_type)
+        {
+            Block_UI(blockPos, block_type);
+            this.Size = new Size((int)Board_Space_Value.BLOCK_VALUE, (int)Board_Space_Value.BLOCK_VALUE);
+            this.Location = blockPos;
+        }
+
+        public void Block_UI(Point blockPos, BLOCK_TYPE block_type)
+        {
+            switch (block_type)
+            {
+                case BLOCK_TYPE.BLANK:
+                    {
+                        this.BackColor = Color.FromArgb(234, 216, 192);
+                        this.block_Type = BLOCK_TYPE.BLANK;
+                        Board_Related_Function.changeBoardStatus(blockPos, this.block_Type);
+                        break;
+                    }
+                case BLOCK_TYPE.BLOCK_2:
+                    {
+                        this.BackColor = Color.White;
+                        this.block_Type = BLOCK_TYPE.BLOCK_2;
+                        Board_Related_Function.changeBoardStatus(blockPos, this.block_Type);
+                        break;
+                    }
+                case BLOCK_TYPE.BLOCK_4:
+                    {
+                        this.BackColor = Color.White;
+                        this.block_Type = BLOCK_TYPE.BLOCK_4;
+                        Board_Related_Function.changeBoardStatus(blockPos, this.block_Type);
+                        break;
+                    }
+                case BLOCK_TYPE.BLOCK_8:
+                    {
+                        this.BackColor = Color.White;
+                        this.block_Type = BLOCK_TYPE.BLOCK_8;
+                        Board_Related_Function.changeBoardStatus(blockPos, this.block_Type);
+                        break;
+                    }
+                case BLOCK_TYPE.BLOCK_16:
+                    {
+                        this.BackColor = Color.White;
+                        this.block_Type = BLOCK_TYPE.BLOCK_16;
+                        Board_Related_Function.changeBoardStatus(blockPos, this.block_Type);
+                        break;
+                    }
+                case BLOCK_TYPE.BLOCK_32:
+                    {
+                        this.BackColor = Color.White;
+                        this.block_Type = BLOCK_TYPE.BLOCK_32;
+                        Board_Related_Function.changeBoardStatus(blockPos, this.block_Type);
+                        break;
+                    }
+                case BLOCK_TYPE.BLOCK_64:
+                    {
+                        this.BackColor = Color.White;
+                        this.block_Type = BLOCK_TYPE.BLOCK_64;
+                        Board_Related_Function.changeBoardStatus(blockPos, this.block_Type);
+                        break;
+                    }
+                case BLOCK_TYPE.BLOCK_128:
+                    {
+                        this.BackColor = Color.White;
+                        this.block_Type = BLOCK_TYPE.BLOCK_128;
+                        Board_Related_Function.changeBoardStatus(blockPos, this.block_Type);
+                        break;
+                    }
+            }
+        }
+    }
+}

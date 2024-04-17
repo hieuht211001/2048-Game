@@ -1,0 +1,11 @@
+C:\Users\hieu\Desktop\Personal Project\2048_Game\2048_Game\bin\Debug\2048_Game.exe.config
+C:\Users\hieu\Desktop\Personal Project\2048_Game\2048_Game\bin\Debug\2048_Game.exe
+C:\Users\hieu\Desktop\Personal Project\2048_Game\2048_Game\bin\Debug\2048_Game.pdb
+C:\Users\hieu\Desktop\Personal Project\2048_Game\2048_Game\obj\Debug\2048_Game.csproj.AssemblyReference.cache
+C:\Users\hieu\Desktop\Personal Project\2048_Game\2048_Game\obj\Debug\_2048_Game.Form_GameBoard.resources
+C:\Users\hieu\Desktop\Personal Project\2048_Game\2048_Game\obj\Debug\_2048_Game.Properties.Resources.resources
+C:\Users\hieu\Desktop\Personal Project\2048_Game\2048_Game\obj\Debug\2048_Game.csproj.GenerateResource.cache
+C:\Users\hieu\Desktop\Personal Project\2048_Game\2048_Game\obj\Debug\2048_Game.csproj.CoreCompileInputs.cache
+C:\Users\hieu\Desktop\Personal Project\2048_Game\2048_Game\obj\Debug\2048_Game.exe
+C:\Users\hieu\Desktop\Personal Project\2048_Game\2048_Game\obj\Debug\2048_Game.pdb
+C:\Users\hieu\Desktop\Personal Project\2048_Game\2048_Game\obj\Debug\_2048_Game.Form_Game.resources
