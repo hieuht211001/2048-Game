@@ -65,6 +65,7 @@ namespace _2048_Game
                 if (iGap == BeforePos.Y - AfterPos.Y) 
                 { 
                     timer.Stop();
+                    timer.Dispose();
                     // change state of timer in dictionary (stop)
                     timerStates[timer] = false;
                     if (bPlusFlag) { Block_Plus_Algorithm(block, AfterPos, Form_Board); }
@@ -128,6 +129,7 @@ namespace _2048_Game
                 if (iGap == AfterPos.Y - BeforePos.Y)
                 {
                     timer.Stop();
+                    timer.Dispose();
                     timerStates[timer] = false;
                     if (bPlusFlag) { Block_Plus_Algorithm(block, AfterPos, Form_Board); }
                 }
@@ -190,6 +192,7 @@ namespace _2048_Game
                 if (iGap == AfterPos.X - BeforePos.X)
                 {
                     timer.Stop();
+                    timer.Dispose();
                     timerStates[timer] = false;
                     if (bPlusFlag) { Block_Plus_Algorithm(block, AfterPos, Form_Board); }
                 }
@@ -252,6 +255,7 @@ namespace _2048_Game
                 if (iGap == BeforePos.X - AfterPos.X)
                 {
                     timer.Stop();
+                    timer.Dispose();
                     timerStates[timer] = false;
                     if (bPlusFlag) { Block_Plus_Algorithm(block, AfterPos, Form_Board); }
                 }
