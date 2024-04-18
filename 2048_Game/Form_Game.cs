@@ -12,12 +12,15 @@ namespace _2048_Game
 {
     public partial class Form_Game : Form
     {
+        public static int TotalScore = 0;
+        public static int BestScore = 0;
         public Form_GameBoard form_GameBoard = null;
         public bool dragging;
         public Point startPoint;
         public Form_Game()
         {
             InitializeComponent();
+            this.Icon = global::_2048_Game.Properties.Resources._2048game_nhi1;
             this.StartPosition = FormStartPosition.CenterScreen;
         }
 
@@ -38,6 +41,7 @@ namespace _2048_Game
 
             if (result == DialogResult.Yes)
             {
+                TotalScore = 0;
                 Board_Related_Function.Board_Init(form_GameBoard);
             }
             form_GameBoard.Focus();
@@ -63,6 +67,13 @@ namespace _2048_Game
         private void Form_Game_MouseUp(object sender, MouseEventArgs e)
         {
             dragging = false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            lbl_CurrentScore.Text = TotalScore.ToString();
+            if (BestScore < TotalScore) { BestScore = TotalScore; } 
+            lbl_BestScore.Text = BestScore.ToString();
         }
     }
 }

@@ -17,19 +17,21 @@ namespace _2048_Game
         BLOCK_16,
         BLOCK_32,
         BLOCK_64,
-        BLOCK_128
+        BLOCK_128,
+        TEMP
     }
     public class Block : PictureBox
     {
         public BLOCK_TYPE block_Type;
         public Block(Point blockPos, BLOCK_TYPE block_type)
         {
-            Block_UI(blockPos, block_type);
+            Block_UI(blockPos, ref block_type);
             this.Size = new Size((int)Board_Space_Value.BLOCK_VALUE, (int)Board_Space_Value.BLOCK_VALUE);
             this.Location = blockPos;
+            this.BackgroundImageLayout = ImageLayout.Zoom;
         }
 
-        public void Block_UI(Point blockPos, BLOCK_TYPE block_type)
+        public void Block_UI(Point blockPos, ref BLOCK_TYPE block_type)
         {
             switch (block_type)
             {
@@ -42,49 +44,49 @@ namespace _2048_Game
                     }
                 case BLOCK_TYPE.BLOCK_2:
                     {
-                        this.BackColor = Color.White;
+                        this.BackgroundImage = global::_2048_Game.Properties.Resources._2048game_gao;
                         this.block_Type = BLOCK_TYPE.BLOCK_2;
                         Board_Related_Function.changeBoardStatus(blockPos, this.block_Type);
                         break;
                     }
                 case BLOCK_TYPE.BLOCK_4:
                     {
-                        this.BackColor = Color.White;
+                        this.BackgroundImage = global::_2048_Game.Properties.Resources._2048game_bo;
                         this.block_Type = BLOCK_TYPE.BLOCK_4;
                         Board_Related_Function.changeBoardStatus(blockPos, this.block_Type);
                         break;
                     }
                 case BLOCK_TYPE.BLOCK_8:
                     {
-                        this.BackColor = Color.White;
+                        this.BackgroundImage = global::_2048_Game.Properties.Resources._2048game_muoi;
                         this.block_Type = BLOCK_TYPE.BLOCK_8;
                         Board_Related_Function.changeBoardStatus(blockPos, this.block_Type);
                         break;
                     }
                 case BLOCK_TYPE.BLOCK_16:
                     {
-                        this.BackColor = Color.White;
+                        this.BackgroundImage = global::_2048_Game.Properties.Resources._2048game_hieu;
                         this.block_Type = BLOCK_TYPE.BLOCK_16;
                         Board_Related_Function.changeBoardStatus(blockPos, this.block_Type);
                         break;
                     }
                 case BLOCK_TYPE.BLOCK_32:
                     {
-                        this.BackColor = Color.White;
+                        this.BackgroundImage = global::_2048_Game.Properties.Resources._2048game_nhi;
                         this.block_Type = BLOCK_TYPE.BLOCK_32;
                         Board_Related_Function.changeBoardStatus(blockPos, this.block_Type);
                         break;
                     }
                 case BLOCK_TYPE.BLOCK_64:
                     {
-                        this.BackColor = Color.White;
+                        this.BackgroundImage = global::_2048_Game.Properties.Resources._2048game_heart;
                         this.block_Type = BLOCK_TYPE.BLOCK_64;
                         Board_Related_Function.changeBoardStatus(blockPos, this.block_Type);
                         break;
                     }
                 case BLOCK_TYPE.BLOCK_128:
                     {
-                        this.BackColor = Color.White;
+                        this.BackgroundImage = global::_2048_Game.Properties.Resources._2048game_home;
                         this.block_Type = BLOCK_TYPE.BLOCK_128;
                         Board_Related_Function.changeBoardStatus(blockPos, this.block_Type);
                         break;

@@ -32,6 +32,13 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>2048game_nhi.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Win32Resource>
+    </Win32Resource>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -80,6 +87,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -96,6 +104,34 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Game_Function\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2048game_bo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2048game_hieu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2048game_muoi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2048game_nhi.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2048game_gao.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2048game_home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2048game_heart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sound_button_click.wav" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="2048game_nhi.ico" />
+    <Content Include="Resources\2048game_nhi.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
