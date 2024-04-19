@@ -41,6 +41,7 @@ namespace _2048_Game
             this.Name = "Form_GameBoard";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form_GameBoard_Load);
+            this.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.Form_GameBoard_PreviewKeyDown);
             this.ResumeLayout(false);
 
         }

@@ -73,6 +73,7 @@ namespace _2048_Game
             {
                 if (timer.Enabled) { return false; }
             }
+            // delete all data of timer after check done
             Block_Related_Function.timerStates.Clear();
             return true;
         }
@@ -89,6 +90,14 @@ namespace _2048_Game
             }
 
             return true;
+        }
+
+        private void Form_GameBoard_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
+        {
+            if (!AllAnimationTimersStopped())
+            {
+                e.IsInputKey = true;
+            }
         }
     }
 }

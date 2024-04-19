@@ -39,6 +39,8 @@ namespace _2048_Game
             this.lbl_CurrentScore = new System.Windows.Forms.Label();
             this.lbl_BestScore = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label3 = new System.Windows.Forms.Label();
+            this.lbl_Exit = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
@@ -118,7 +120,7 @@ namespace _2048_Game
             this.lbl_CurrentScore.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lbl_CurrentScore.Size = new System.Drawing.Size(41, 18);
             this.lbl_CurrentScore.TabIndex = 0;
-            this.lbl_CurrentScore.Text = "999";
+            this.lbl_CurrentScore.Text = "0";
             this.lbl_CurrentScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbl_BestScore
@@ -130,7 +132,7 @@ namespace _2048_Game
             this.lbl_BestScore.Name = "lbl_BestScore";
             this.lbl_BestScore.Size = new System.Drawing.Size(41, 18);
             this.lbl_BestScore.TabIndex = 6;
-            this.lbl_BestScore.Text = "999";
+            this.lbl_BestScore.Text = "0";
             this.lbl_BestScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // timer1
@@ -139,11 +141,44 @@ namespace _2048_Game
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label3
+            // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Verdana", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(64)))), ((int)(((byte)(0)))));
+            this.label3.Location = new System.Drawing.Point(0, 56);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(180, 65);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "1004";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // lbl_Exit
+            // 
+            this.lbl_Exit.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.lbl_Exit.AutoSize = true;
+            this.lbl_Exit.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.lbl_Exit.Font = new System.Drawing.Font("Verdana", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_Exit.ForeColor = System.Drawing.Color.Gray;
+            this.lbl_Exit.Location = new System.Drawing.Point(10, 8);
+            this.lbl_Exit.Name = "lbl_Exit";
+            this.lbl_Exit.Size = new System.Drawing.Size(25, 23);
+            this.lbl_Exit.TabIndex = 8;
+            this.lbl_Exit.Text = "X";
+            this.lbl_Exit.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.lbl_Exit.Click += new System.EventHandler(this.lbl_Exit_Click);
+            this.lbl_Exit.MouseLeave += new System.EventHandler(this.lbl_Exit_MouseLeave);
+            this.lbl_Exit.MouseHover += new System.EventHandler(this.lbl_Exit_MouseHover);
+            // 
             // Form_Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(96F, 96F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(350, 500);
+            this.Controls.Add(this.lbl_Exit);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.lbl_BestScore);
             this.Controls.Add(this.lbl_CurrentScore);
             this.Controls.Add(this.label2);
@@ -179,5 +214,7 @@ namespace _2048_Game
         private System.Windows.Forms.Label lbl_CurrentScore;
         private System.Windows.Forms.Label lbl_BestScore;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lbl_Exit;
     }
 }

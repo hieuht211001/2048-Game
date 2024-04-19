@@ -75,5 +75,28 @@ namespace _2048_Game
             if (BestScore < TotalScore) { BestScore = TotalScore; } 
             lbl_BestScore.Text = BestScore.ToString();
         }
+
+        private void lbl_Exit_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Do you want to quit?", "Quit Game", MessageBoxButtons.YesNo);
+
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+            form_GameBoard.Focus();
+        }
+
+        private void lbl_Exit_MouseHover(object sender, EventArgs e)
+        {
+            lbl_Exit.ForeColor = Color.FromArgb(192, 64, 0);
+            lbl_Exit.BackColor = SystemColors.Control;
+        }
+
+        private void lbl_Exit_MouseLeave(object sender, EventArgs e)
+        {
+            lbl_Exit.ForeColor = Color.Gray;
+            lbl_Exit.BackColor = SystemColors.ControlLightLight;
+        }
     }
 }
