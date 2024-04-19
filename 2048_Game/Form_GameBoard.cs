@@ -73,6 +73,7 @@ namespace _2048_Game
             {
                 if (timer.Enabled) { return false; }
             }
+            Block_Related_Function.timerStates.Clear();
             return true;
         }
 
